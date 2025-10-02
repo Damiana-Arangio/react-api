@@ -1,3 +1,4 @@
+import Card from "./card";
 import { useState, useEffect } from "react"
 
 function MyMain() {
@@ -18,10 +19,15 @@ function MyMain() {
     /***************
         RENDERING
     ****************/ 
-    return(
-        <main> 
-            
-        </main>
+    return (
+            <main className="container"> 
+            {ListaAttori.map(attore => (
+                <Card 
+                    key={attore.id}
+                    attore = {attore}
+                />
+            ))}
+            </main>
     )
 
     /***************
@@ -31,7 +37,7 @@ function MyMain() {
     /* Richiesta API per ottenere la lista di attori */
     function fetchListaAttori() {
         axios.get("https://lanciweb.github.io/demo/api/actors/")
-        .then((risApi) => console.log(risApi.data))  
+            .then((risApi) => setListaAttori(risApi.data))  
                  
     }
 }
