@@ -1,14 +1,16 @@
-
 import './App.css'
+import MyHeader from './assets/components/MyHeader'
+import MyMain from './assets/components/MyMain'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
-     
+      <MyHeader/>
+      <MyMain/>
     </>
   )
+
 }
 
 export default App
