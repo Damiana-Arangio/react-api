@@ -1,6 +1,7 @@
 /******************
   REGOLE GENERALI
 *******************/
+
 /** Reset Pagina */
 * {
   margin: 0;
@@ -10,18 +11,82 @@
 
 /** Stile Generale */
 :root {
-  font-size: 12px;
+  font-size: 13px;
 }
 
 body {
   font-size: 1rem;
+  background-color: black;
 }
 
+h1 {
+  margin: 50px;
+  text-align: center;
+  font-size: 4rem;
+  font-family: "Bungee Spice", sans-serif;
+  color: #DDDADA;
+  text-shadow: 5px 5px 6px rgba(125, 125, 125, 0.7);
+}
+
+h3 {
+  font-size: 2em;
+  text-align: center;
+  margin-top: 10px;
+}
+
+li {
+  list-style-type: none;
+  padding: 5px;
+}
+
+/************************
+  CLASSI RIUTILIZZABILI
+*************************/
+
+/** Contenitori */
 .container {
-  max-width: 1000px;
-  /* display: flex; */
-  /* flex-direction: row; */
-  /* justify-content: space-between; */
+  max-width: 1260px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 30px;
 }
 
+.container-card{
+  flex-basis: calc((100% - 90px) / 3);
+  border-radius: 10px;
+  border: 2px solid black;
+  box-shadow: 10px 5px 5px #DDDADA;
+  background-color: rgb(221, 218, 218);
+}
+
+.container-img {
+  margin: 20px;
+  text-align: center;
+}
+
+img {
+  width: 230px;
+  height: 300px;
+  object-fit: cover;
+}
+
+img:hover {
+  rotate: 10dag;
+}
+
+/* Testo */
+.text-center {
+  text-align: center;
+}
+
+.text-bold {
+  font-weight: bold;
+}
+
+/** Card */
+.description-card {
+  margin: 20px;
+}
 

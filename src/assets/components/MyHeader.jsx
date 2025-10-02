@@ -1,7 +1,7 @@
 function MyHeader() {
     return(
         <header>
-            <h1> Famous Actors </h1>
+            <h1> FAMOUS ACTORS </h1>
         </header>
     )
 }
